@@ -1,0 +1,36 @@
+SELECT "Alias","geometry",round(Sum("area")/(200*200*PI()),2)AS "green" /*:double*/ FROM "added_geom_info" WHERE LOWER(ITEM2012) LIKE "%green%"
+OR LOWER(ITEM2012) LIKE "%pastures%"
+OR LOWER(ITEM2012) LIKE "%crops%"
+GROUP BY "Alias" 
+
+
+SELECT "Alias","geometry",Sum("area")/(200*200*PI())AS "urban" /*:double*/ FROM "added_geom_info" WHERE LOWER(ITEM2012) LIKE "%continuous%"
+GROUP BY "Alias" 
+
+SELECT "Alias","geometry",Sum("area")/(200*200*PI())AS "other" /*:double*/ FROM "added_geom_info" WHERE LOWER(ITEM2012) LIKE "%industrial%"
+OR LOWER(ITEM2012) LIKE "%structures%"
+OR LOWER(ITEM2012) LIKE "%without%"
+GROUP BY "Alias" 
+
+SELECT "Alias","geometry",Sum("area")/(200*200*PI())AS "roads" /*:double*/ FROM "added_geom_info" WHERE LOWER(ITEM2012) LIKE "%roads%"
+GROUP BY "Alias" 
+
+# Single table join
+SELECT buffered.geometry,buffered.Alias,green_ratio.green FROM buffered
+INNER JOIN green_ratio ON buffered.Alias=green_ratio.Alias
+
+# Multiple table join
+SELECT buffered.geometry,buffered.Alias,green_ratio.green,urban_ratio.urban,other_ratio.other,roads_ratio.roads
+FROM ((((buffered
+INNER JOIN green_ratio ON buffered.Alias=green_ratio.Alias)
+INNER JOIN urban_ratio ON buffered.Alias=urban_ratio.Alias)
+INNER JOIN other_ratio ON buffered.Alias=other_ratio.Alias)
+INNER JOIN roads_ratio ON buffered.Alias=roads_ratio.Alias)
+
+## For atlas creation
+SELECT "Alias","geometry",Sum("area")/(200*200*PI())AS "LCRATIO" /*:double*/,"green" AS "LCTYPE" /*:text*/ 
+FROM "added_geom_info" 
+WHERE LOWER(ITEM2012) LIKE "%green%"
+OR LOWER(ITEM2012) LIKE "%pastures%"
+OR LOWER(ITEM2012) LIKE "%crops%"
+GROUP BY "Alias" 

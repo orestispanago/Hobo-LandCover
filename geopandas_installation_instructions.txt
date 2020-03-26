@@ -1,9 +1,0 @@
-conda install pyproj
-
-pip install descartes
-
-# If you see this error:
-# File "_proj.pyx", line 129, in _proj.Proj.__cinit__ RuntimeError: b'no arguments in initialization list'
-# go here: https://gis.stackexchange.com/questions/338498/why-do-i-get-error-runtime-bno-arguments-in-initialization-list-when-runnin
-
-pip install --user --ignore-installed pyproj==2.4.0
