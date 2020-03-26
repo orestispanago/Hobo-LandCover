@@ -1,14 +1,14 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyAlgorithm="0" readOnly="0" simplifyDrawingTol="1" maxScale="0" minScale="1e+08" labelsEnabled="0" hasScaleBasedVisibilityFlag="0" simplifyMaxScale="1" styleCategories="AllStyleCategories" version="3.6.2-Noosa" simplifyDrawingHints="1" simplifyLocal="1">
+<qgis simplifyLocal="1" hasScaleBasedVisibilityFlag="0" maxScale="0" labelsEnabled="0" simplifyDrawingTol="1" version="3.6.2-Noosa" minScale="1e+08" simplifyAlgorithm="0" simplifyDrawingHints="1" styleCategories="AllStyleCategories" simplifyMaxScale="1" readOnly="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
     <Searchable>1</Searchable>
   </flags>
-  <renderer-v2 type="singleSymbol" symbollevels="0" forceraster="0" enableorderby="0">
+  <renderer-v2 forceraster="0" symbollevels="0" enableorderby="0" type="singleSymbol">
     <symbols>
-      <symbol type="fill" alpha="0.35" force_rhr="0" name="0" clip_to_extent="1">
-        <layer class="SimpleFill" locked="0" pass="0" enabled="1">
+      <symbol clip_to_extent="1" type="fill" name="0" alpha="0.205" force_rhr="0">
+        <layer locked="0" class="SimpleFill" enabled="1" pass="0">
           <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
           <prop v="0,0,0,255" k="color"/>
           <prop v="bevel" k="joinstyle"/>
@@ -22,9 +22,9 @@
           <prop v="no" k="style"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option value="" type="QString" name="name"/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option value="collection" type="QString" name="type"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -42,21 +42,21 @@
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-    <DiagramCategory maxScaleDenominator="1e+08" penAlpha="255" opacity="1" minScaleDenominator="0" labelPlacementMethod="XHeight" lineSizeScale="3x:0,0,0,0,0,0" backgroundAlpha="255" penColor="#000000" rotationOffset="270" height="15" diagramOrientation="Up" enabled="0" backgroundColor="#ffffff" width="15" sizeType="MM" penWidth="0" sizeScale="3x:0,0,0,0,0,0" scaleDependency="Area" minimumSize="0" scaleBasedVisibility="0" lineSizeType="MM" barWidth="5">
-      <fontProperties style="" description="MS Shell Dlg 2,6.6,-1,5,50,0,0,0,0,0"/>
-      <attribute label="" color="#000000" field=""/>
+    <DiagramCategory width="15" barWidth="5" sizeType="MM" minimumSize="0" sizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" penColor="#000000" lineSizeScale="3x:0,0,0,0,0,0" scaleBasedVisibility="0" scaleDependency="Area" opacity="1" backgroundColor="#ffffff" maxScaleDenominator="1e+08" diagramOrientation="Up" labelPlacementMethod="XHeight" penAlpha="255" minScaleDenominator="0" backgroundAlpha="255" rotationOffset="270" penWidth="0" enabled="0" height="15">
+      <fontProperties description="MS Shell Dlg 2,6.6,-1,5,50,0,0,0,0,0" style=""/>
+      <attribute field="" color="#000000" label=""/>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings placement="1" priority="0" zIndex="0" linePlacementFlags="18" dist="0" obstacle="0" showAll="1">
+  <DiagramLayerSettings placement="1" zIndex="0" showAll="1" dist="0" priority="0" linePlacementFlags="18" obstacle="0">
     <properties>
       <Option type="Map">
-        <Option type="QString" value="" name="name"/>
+        <Option value="" type="QString" name="name"/>
         <Option name="properties"/>
-        <Option type="QString" value="collection" name="type"/>
+        <Option value="collection" type="QString" name="type"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
-  <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+  <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
     <activeChecks/>
     <checkConfiguration/>
   </geometryOptions>
@@ -133,54 +133,54 @@
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias name="" index="0" field="COUNTRY"/>
-    <alias name="" index="1" field="CITIES"/>
-    <alias name="" index="2" field="FUA_OR_CIT"/>
-    <alias name="" index="3" field="CODE2012"/>
-    <alias name="" index="4" field="ITEM2012"/>
-    <alias name="" index="5" field="PROD_DATE"/>
-    <alias name="" index="6" field="IDENT"/>
-    <alias name="" index="7" field="Shape_Leng"/>
-    <alias name="" index="8" field="Shape_Area"/>
-    <alias name="" index="9" field="Pop2012"/>
+    <alias index="0" name="" field="COUNTRY"/>
+    <alias index="1" name="" field="CITIES"/>
+    <alias index="2" name="" field="FUA_OR_CIT"/>
+    <alias index="3" name="" field="CODE2012"/>
+    <alias index="4" name="" field="ITEM2012"/>
+    <alias index="5" name="" field="PROD_DATE"/>
+    <alias index="6" name="" field="IDENT"/>
+    <alias index="7" name="" field="Shape_Leng"/>
+    <alias index="8" name="" field="Shape_Area"/>
+    <alias index="9" name="" field="Pop2012"/>
   </aliases>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
   <defaults>
-    <default expression="" field="COUNTRY" applyOnUpdate="0"/>
-    <default expression="" field="CITIES" applyOnUpdate="0"/>
-    <default expression="" field="FUA_OR_CIT" applyOnUpdate="0"/>
-    <default expression="" field="CODE2012" applyOnUpdate="0"/>
-    <default expression="" field="ITEM2012" applyOnUpdate="0"/>
-    <default expression="" field="PROD_DATE" applyOnUpdate="0"/>
-    <default expression="" field="IDENT" applyOnUpdate="0"/>
-    <default expression="" field="Shape_Leng" applyOnUpdate="0"/>
-    <default expression="" field="Shape_Area" applyOnUpdate="0"/>
-    <default expression="" field="Pop2012" applyOnUpdate="0"/>
+    <default field="COUNTRY" expression="" applyOnUpdate="0"/>
+    <default field="CITIES" expression="" applyOnUpdate="0"/>
+    <default field="FUA_OR_CIT" expression="" applyOnUpdate="0"/>
+    <default field="CODE2012" expression="" applyOnUpdate="0"/>
+    <default field="ITEM2012" expression="" applyOnUpdate="0"/>
+    <default field="PROD_DATE" expression="" applyOnUpdate="0"/>
+    <default field="IDENT" expression="" applyOnUpdate="0"/>
+    <default field="Shape_Leng" expression="" applyOnUpdate="0"/>
+    <default field="Shape_Area" expression="" applyOnUpdate="0"/>
+    <default field="Pop2012" expression="" applyOnUpdate="0"/>
   </defaults>
   <constraints>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="COUNTRY" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="CITIES" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="FUA_OR_CIT" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="CODE2012" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="ITEM2012" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="PROD_DATE" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="IDENT" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="Shape_Leng" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="Shape_Area" exp_strength="0"/>
-    <constraint unique_strength="0" constraints="0" notnull_strength="0" field="Pop2012" exp_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="COUNTRY" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="CITIES" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="FUA_OR_CIT" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="CODE2012" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="ITEM2012" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="PROD_DATE" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="IDENT" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="Shape_Leng" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="Shape_Area" constraints="0" unique_strength="0"/>
+    <constraint notnull_strength="0" exp_strength="0" field="Pop2012" constraints="0" unique_strength="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint exp="" desc="" field="COUNTRY"/>
-    <constraint exp="" desc="" field="CITIES"/>
-    <constraint exp="" desc="" field="FUA_OR_CIT"/>
-    <constraint exp="" desc="" field="CODE2012"/>
-    <constraint exp="" desc="" field="ITEM2012"/>
-    <constraint exp="" desc="" field="PROD_DATE"/>
-    <constraint exp="" desc="" field="IDENT"/>
-    <constraint exp="" desc="" field="Shape_Leng"/>
-    <constraint exp="" desc="" field="Shape_Area"/>
-    <constraint exp="" desc="" field="Pop2012"/>
+    <constraint exp="" field="COUNTRY" desc=""/>
+    <constraint exp="" field="CITIES" desc=""/>
+    <constraint exp="" field="FUA_OR_CIT" desc=""/>
+    <constraint exp="" field="CODE2012" desc=""/>
+    <constraint exp="" field="ITEM2012" desc=""/>
+    <constraint exp="" field="PROD_DATE" desc=""/>
+    <constraint exp="" field="IDENT" desc=""/>
+    <constraint exp="" field="Shape_Leng" desc=""/>
+    <constraint exp="" field="Shape_Area" desc=""/>
+    <constraint exp="" field="Pop2012" desc=""/>
   </constraintExpressions>
   <expressionfields/>
   <attributeactions>
@@ -188,17 +188,17 @@
   </attributeactions>
   <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
     <columns>
-      <column type="field" name="COUNTRY" width="-1" hidden="0"/>
-      <column type="field" name="CITIES" width="-1" hidden="0"/>
-      <column type="field" name="FUA_OR_CIT" width="-1" hidden="0"/>
-      <column type="field" name="CODE2012" width="-1" hidden="0"/>
-      <column type="field" name="ITEM2012" width="-1" hidden="0"/>
-      <column type="field" name="PROD_DATE" width="-1" hidden="0"/>
-      <column type="field" name="IDENT" width="-1" hidden="0"/>
-      <column type="field" name="Shape_Leng" width="-1" hidden="0"/>
-      <column type="field" name="Shape_Area" width="-1" hidden="0"/>
-      <column type="field" name="Pop2012" width="-1" hidden="0"/>
-      <column type="actions" width="-1" hidden="1"/>
+      <column type="field" name="COUNTRY" hidden="0" width="-1"/>
+      <column type="field" name="CITIES" hidden="0" width="-1"/>
+      <column type="field" name="FUA_OR_CIT" hidden="0" width="-1"/>
+      <column type="field" name="CODE2012" hidden="0" width="-1"/>
+      <column type="field" name="ITEM2012" hidden="0" width="-1"/>
+      <column type="field" name="PROD_DATE" hidden="0" width="-1"/>
+      <column type="field" name="IDENT" hidden="0" width="-1"/>
+      <column type="field" name="Shape_Leng" hidden="0" width="-1"/>
+      <column type="field" name="Shape_Area" hidden="0" width="-1"/>
+      <column type="field" name="Pop2012" hidden="0" width="-1"/>
+      <column type="actions" hidden="1" width="-1"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -229,28 +229,28 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field name="CITIES" editable="1"/>
-    <field name="CODE2012" editable="1"/>
-    <field name="COUNTRY" editable="1"/>
-    <field name="FUA_OR_CIT" editable="1"/>
-    <field name="IDENT" editable="1"/>
-    <field name="ITEM2012" editable="1"/>
-    <field name="PROD_DATE" editable="1"/>
-    <field name="Pop2012" editable="1"/>
-    <field name="Shape_Area" editable="1"/>
-    <field name="Shape_Leng" editable="1"/>
+    <field editable="1" name="CITIES"/>
+    <field editable="1" name="CODE2012"/>
+    <field editable="1" name="COUNTRY"/>
+    <field editable="1" name="FUA_OR_CIT"/>
+    <field editable="1" name="IDENT"/>
+    <field editable="1" name="ITEM2012"/>
+    <field editable="1" name="PROD_DATE"/>
+    <field editable="1" name="Pop2012"/>
+    <field editable="1" name="Shape_Area"/>
+    <field editable="1" name="Shape_Leng"/>
   </editable>
   <labelOnTop>
-    <field name="CITIES" labelOnTop="0"/>
-    <field name="CODE2012" labelOnTop="0"/>
-    <field name="COUNTRY" labelOnTop="0"/>
-    <field name="FUA_OR_CIT" labelOnTop="0"/>
-    <field name="IDENT" labelOnTop="0"/>
-    <field name="ITEM2012" labelOnTop="0"/>
-    <field name="PROD_DATE" labelOnTop="0"/>
-    <field name="Pop2012" labelOnTop="0"/>
-    <field name="Shape_Area" labelOnTop="0"/>
-    <field name="Shape_Leng" labelOnTop="0"/>
+    <field labelOnTop="0" name="CITIES"/>
+    <field labelOnTop="0" name="CODE2012"/>
+    <field labelOnTop="0" name="COUNTRY"/>
+    <field labelOnTop="0" name="FUA_OR_CIT"/>
+    <field labelOnTop="0" name="IDENT"/>
+    <field labelOnTop="0" name="ITEM2012"/>
+    <field labelOnTop="0" name="PROD_DATE"/>
+    <field labelOnTop="0" name="Pop2012"/>
+    <field labelOnTop="0" name="Shape_Area"/>
+    <field labelOnTop="0" name="Shape_Leng"/>
   </labelOnTop>
   <widgets/>
   <previewExpression>IDENT</previewExpression>
